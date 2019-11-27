@@ -4,11 +4,11 @@ import axios from 'axios';
 //import QS from 'qs';
 
 
-const aaa = axios.create(
+const aa = axios.create(
 
 );
 // 添加请求拦截器
-aaa.interceptors.request.use(function (config) {
+aa.interceptors.request.use(function (config) {
   // 在发送请求之前做些什么
   if(localStorage.getItem('token')){
     config.headers['x-auth'] = localStorage.getItem('sfdgd')
@@ -20,7 +20,7 @@ aaa.interceptors.request.use(function (config) {
 });
 
 // 添加响应拦截器
-aaa.interceptors.response.use(function (response) {
+aa.interceptors.response.use(function (response) {
   // 对响应数据做点什么
   return response
 }, function (error) {
@@ -30,4 +30,4 @@ aaa.interceptors.response.use(function (response) {
 
 
 
-export default aaa;
+export default aa;

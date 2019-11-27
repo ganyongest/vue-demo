@@ -7,17 +7,7 @@ import axios from 'axios';
 const aa = axios.create(
 
 );
-// 添加请求拦截器
-aa.interceptors.request.use(function (config) {
-  // 在发送请求之前做些什么
-  if(localStorage.getItem('token')){
-    config.headers['x-auth'] = localStorage.getItem('sfdgd')
-  }
-  return config
-}, function (error) {
-  // 对请求错误做些什么
-  return Promise.reject(error)
-});
+
 
 // 添加响应拦截器
 aa.interceptors.response.use(function (response) {

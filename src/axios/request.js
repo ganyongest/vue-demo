@@ -7,8 +7,3 @@ import axios from 'axios';
 const aa = axios.create(
 
 );
-
-
-
-
-export default aa;
